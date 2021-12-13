@@ -26,13 +26,7 @@ jobs:
       - name: Azure Login
         uses: Azure/login@v1
         with:
-          # ClientId of the Azure Service principal created.
-          client-id: ${{ secrets.CLIENT_ID }} 
-          # TenantId of the Azure Service principal created.
-          tenant-id: ${{ secrets.TENANT_ID }} 
-          # Set this value to true to enable Azure PowerShell Login in addition to Az CLI login
-          enable-AzPSSession: true
-
+           creds: ${{ secrets.CLIENT_ID }} 
 
       - name: Deploy Azure Resource Manager (ARM) Template
         uses: Azure/arm-deploy@v1
