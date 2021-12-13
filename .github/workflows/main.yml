@@ -40,5 +40,5 @@ jobs:
           # Provide the name of a resource group, only required for resource Group deployments.
           resourceGroupName: sully-db-ws-poc
           # Specify the path or URL to the Azure Resource Manager template.
-          template: ./sullydatafactory/sullydf/ARMTemplateForFactory.json
+          template: ./sullydf/ARMTemplateForFactory.json
 
