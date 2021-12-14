@@ -28,4 +28,4 @@ jobs:
 
       - name: Install NPM packages
         run: |
-          npm install ./build/
+          npm install 
