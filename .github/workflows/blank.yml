@@ -26,4 +26,3 @@ jobs:
       - name: Install NPM packages and run validate/build
         run: |
           npm install ./build
-          npm run build validate . ${{ secrets.DEV_DF }} 
