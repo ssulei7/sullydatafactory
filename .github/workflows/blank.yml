@@ -37,4 +37,7 @@ jobs:
       - name: Export ARM Template
         run: |
           npm run build export . ${{ secrets.DEV_DF }} "ArmTemplates"
-          ls 
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.3.0
+        with:
+          path: ./ArmTemplates      
