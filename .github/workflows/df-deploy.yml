@@ -57,7 +57,11 @@ jobs:
       - name: Azure Login
         uses: Azure/login@v1
         with:
-           creds: ${{ secrets.CLIENT_ID }} 
+           creds: ${{ secrets.CLIENT_ID }}
+           
+      - name: Echo repo contents
+        run: |
+          ls -a
 
       - name: Deploy Azure Resource Manager (ARM) Template
         uses: Azure/arm-deploy@v1
