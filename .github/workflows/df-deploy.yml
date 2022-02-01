@@ -58,10 +58,6 @@ jobs:
         uses: Azure/login@v1
         with:
            creds: ${{ secrets.CLIENT_ID }}
-           
-      - name: Echo repo contents
-        run: |
-          ls -a
 
       - name: Deploy Azure Resource Manager (ARM) Template
         uses: Azure/arm-deploy@v1
@@ -73,4 +69,4 @@ jobs:
           # Provide the name of a resource group, only required for resource Group deployments.
           resourceGroupName: sully-db-ws-poc
           # Specify the path or URL to the Azure Resource Manager template.
-          template: ./artifact/ARMTemplateForFactory.json
+          template: ./ARMTemplateForFactory.json
